@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shushed</title>
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      scroll-behavior: smooth; /* Enables smooth scrolling */
+    }
+
+    section {
+      height: 100vh; /* Full-screen height */
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Section Backgrounds */
+    #section1 {
+      background-image: url('1.png'); /* Replace with correct path */
+    }
+
+    #section2 {
+      background-image: url('2.png'); /* Replace with correct path */
+      background-color: #2C2C2C; /* Fallback dark grey */
+    }
+
+    #section3 {
+      background-image: url('3.png'); /* Replace with correct path */
+    }
+
+    #section4 {
+      background-image: url('4.png'); /* Replace with correct path */
+      background-color: #2C2C2C; /* Fallback dark grey */
+    }
+
+    /* Navigation Bar */
+    nav {
+      position: fixed;
+      top: 20px;
+      width: 100%;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-size: 10px;
+      font-weight: bold;
+      font-family: 'Arial', sans-serif;
+      letter-spacing: 2px;
+      color: rgb(40, 40, 40); /* Default color */
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a.light {
+      color: #cacac8; /* Light text color for dark backgrounds */
+    }
+
+    /* Watch Now Button */
+    #watch-now {
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 15px;
+      font-weight: bold;
+      font-family: 'Arial', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: rgb(42, 42, 42);
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    #watch-now:hover {
+      color: gray;
+    }
+
+    /* Film Section */
+    #section2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    iframe {
+      width: 70%; /* Adjust width of the video */
+      height: 70%; /* Adjust height of the video */
+      max-width: 1200px; /* Optional: Set a max width */
+      max-height: 800px; /* Optional: Set a max height */
+      border: none;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <ul>
+    <li><a href="#section1" class="nav-link">Home</a></li>
+    <li><a href="#section2" class="nav-link">Film</a></li>
+    <li><a href="#section3" class="nav-link">BTS</a></li>
+    <li><a href="#section4" class="nav-link">About</a></li>
+  </ul>
+</nav>
+
+<!-- Sections -->
+<section id="section1">
+  <!-- Watch Now Button -->
+  <a href="#section2" id="watch-now">Watch Now</a>
+</section>
+
+<section id="section2">
+  <!-- YouTube Embed -->
+  <iframe 
+    src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+    allowfullscreen>
+  </iframe>
+</section>
+
+<section id="section3"></section>
+<section id="section4"></section>
+
+<!-- JavaScript for Dynamic Nav -->
+<script>
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  // Define sections and their respective colors
+  const sections = [
+    { id: 'section1', color: 'black' }, // Light background
+    { id: 'section2', color: 'light' }, // Dark background
+    { id: 'section3', color: 'black' }, // Light background
+    { id: 'section4', color: 'light' }  // Dark background
+  ];
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const section = sections.find(s => s.id === entry.target.id);
+        if (section) {
+          navLinks.forEach(link => {
+            link.classList.toggle('light', section.color === 'light');
+          });
+        }
+      }
+    });
+  }, { threshold: 0.5 });
+
+  sections.forEach(section => {
+    const element = document.getElementById(section.id);
+    observer.observe(element);
+  });
+</script>
+</body>
+</html>
