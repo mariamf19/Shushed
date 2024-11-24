@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (videoIframe) {
       setTimeout(() => {
         interactionButtons.style.display = 'block';
-      }, 240000); // 4 minutes = 240000 milliseconds
+      }, 300000); // 5 minutes = 300000 milliseconds
     }
   });
 
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const interval = setInterval(() => {
           if (player && player.getCurrentTime) {
               const currentTime = player.getCurrentTime();
-              if (currentTime >= 240) { // 4 minutes
+              if (currentTime >= 300) { // 5 minutes
                   interactionButtons.style.display = 'block';
                   clearInterval(interval); // Stop checking the time after buttons are shown
               }
