@@ -64,33 +64,41 @@
       font-weight: bold;
       font-family: 'Arial', sans-serif;
       letter-spacing: 2px;
-      color: rgb(40, 40, 40); /* Default color */
+      color: black; /* Default color */
       text-transform: uppercase;
-      transition: color 0.3s ease;
+      transition: color 0.3s ease, transform 0.3s ease;
     }
 
     nav ul li a.light {
-      color: #cacac8; /* Light text color for dark backgrounds */
+      color: #E0E1DD; /* Light text color for dark backgrounds */
+    }
+
+    /* Navigation Hover Animation */
+    nav ul li a:hover {
+      color: #FF5722; /* Highlight color on hover */
+      transform: scale(1.1); /* Slight zoom effect */
     }
 
     /* Watch Now Button */
     #watch-now {
       position: absolute;
-      bottom: 50px;
+      bottom: 30px;
       left: 50%;
       transform: translateX(-50%);
-      font-size: 15px;
+      font-size: 10px;
       font-weight: bold;
       font-family: 'Arial', sans-serif;
       text-transform: uppercase;
       letter-spacing: 2px;
-      color: rgb(42, 42, 42);
+      color: black;
       cursor: pointer;
       text-decoration: none;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
     }
 
     #watch-now:hover {
-      color: gray;
+      color: #FF5722; /* Highlight color */
+      text-shadow: 0 0 5px rgba(255, 87, 34, 0.8); /* Glow effect */
     }
 
     /* Film Section */
