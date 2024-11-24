@@ -18,18 +18,18 @@
     }
 
     #section2 {
-      background-image: url('2.png'); /* Replace with correct path */
+      background-image: url('images/2.png'); /* Replace with correct path */
       background-color: #2C2C2C; /* Fallback dark grey */
     }
 
     #section3 {
-      background-image: url('3.png'); /* Replace with correct path */
+      background-image: url('images/3.png'); /* Replace with correct path */
       height: 100vh;                /* Full screen height */
       margin-top: 100px;             /* Increase this value to add more space */
     }
 
     #section4 {
-      background-image: url('4.png'); /* Replace with correct path */
+      background-image: url('images/4.png'); /* Replace with correct path */
       background-color: #2C2C2C; /* Fallback dark grey */
     }
 
