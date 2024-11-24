@@ -1,0 +1,152 @@
+/* General Styles */
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      scroll-behavior: smooth; /* Enables smooth scrolling */
+    }
+
+    section {
+      height: 100vh; /* Full-screen height */
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Section Backgrounds */
+    #section1 {
+      background-image: url('images/1.png'); /* Replace with correct path */
+    }
+
+    #section2 {
+      background-image: url('2.png'); /* Replace with correct path */
+      background-color: #2C2C2C; /* Fallback dark grey */
+    }
+
+    #section3 {
+      background-image: url('3.png'); /* Replace with correct path */
+      height: 100vh;                /* Full screen height */
+      margin-top: 100px;             /* Increase this value to add more space */
+    }
+
+    #section4 {
+      background-image: url('4.png'); /* Replace with correct path */
+      background-color: #2C2C2C; /* Fallback dark grey */
+    }
+
+    /* Navigation Bar */
+    nav {
+      position: fixed;
+      top: 20px;
+      width: 100%;
+      text-align: center;
+      z-index: 1000;
+      margin-bottom: 500px;           /* Add space below the navigation bar */
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: bold;
+      font-family: 'Arial', sans-serif;
+      letter-spacing: 2px;
+      color: rgba(34, 33, 33, 0.823); /* Default color */
+      text-transform: uppercase;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav ul li a.light {
+      color: #E0E1DD; /* Light text color for dark backgrounds */
+    }
+
+    /* Navigation Hover Animation */
+    nav ul li a:hover {
+      color: #FF5722; /* Highlight color on hover */
+      transform: scale(1.1); /* Slight zoom effect */
+    }
+
+    /* Watch Now Button */
+    #watch-now {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 15px;
+      font-weight: bold;
+      font-family: 'Arial', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: rgba(34, 33, 33, 0.823);
+      cursor: pointer;
+      text-decoration: none;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    } 
+
+    #watch-now:hover {
+      color: rgba(34, 33, 33, 0.823); /* Highlight color */
+      text-shadow: 0 0 5px rgba(255, 87, 34, 0.8); /* Glow effect */
+    }
+
+    /* Film Section */
+    #section2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    iframe {
+      width: 70%; /* Adjust width of the video */
+      height: 70%; /* Adjust height of the video */
+      max-width: 1200px; /* Optional: Set a max width */
+      max-height: 800px; /* Optional: Set a max height */
+      border: none;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Watch Now Oval Background */
+.oval-background {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust to control the size of the oval */
+    background-color: rgba(175, 173, 173, 0.7); /* Translucent white background */
+    border-radius: 50px; /* Makes the background into an oval */
+    text-align: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #watch-now:hover .oval-background {
+    background-color: rgba(255, 87, 34, 0.8); /* Darker translucent color on hover */
+    box-shadow: 0 0 10px rgba(255, 87, 34, 0.8); /* Glow effect on hover */
+  }
+
+/* Interaction Buttons */
+#interaction-buttons {
+    text-align: bottom;
+    margin-top: 20px;
+  }
+  
+  #interaction-buttons button {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 26px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #interaction-buttons button:hover {
+    background-color: #e64a19;
+  }
+  
