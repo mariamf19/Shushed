@@ -10,28 +10,64 @@
       width: 100%;
       background-size: cover;
       background-position: center;
+      margin: 0;
+      padding: 0;
     }
 
     /* Section Backgrounds */
     #section1 {
-      background-image: url('images/1.png'); /* Replace with correct path */
+      background-image: url('images/1.png'); 
     }
 
     #section2 {
-      background-image: url('images/2.png'); /* Replace with correct path */
+      background-image: url('images/2.png'); 
       background-color: #2C2C2C; /* Fallback dark grey */
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
+
+
 
     #section3 {
-      background-image: url('images/3.png'); /* Replace with correct path */
-      height: 100vh;                /* Full screen height */
-      margin-top: 100px;             /* Increase this value to add more space */
-    }
+        background-image: url('images/3.png'); 
+        height: 100vh; /* Full screen height */
+        background-size: cover; /* Ensure the image covers the entire section */
+        background-position: center; /* Center the image within the section */
+        display: flex; /* Use flexbox to center the content */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+      }
+      
+      .w3-content {
+        width: 80%; /* Set the width of the carousel */
+        max-width: 800px; /* Limit the maximum width */
+        margin: 0 auto; /* Center the carousel horizontally */
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); 
+        border-radius: 10px; 
+      }
+    
 
     #section4 {
-      background-image: url('images/4.png'); /* Replace with correct path */
-      background-color: #2C2C2C; /* Fallback dark grey */
+      background-image: url('images/4.png');
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 90px;
+      font-family: 'Arial', sans-serif;
     }
+
+/* About section style */ 
+.about-content {
+    max-width: 800px; /* Limit width for better readability */
+    padding: 20px; /* Add padding for spacing inside the box */
+    color: #d9d9d9; 
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
 
     /* Navigation Bar */
     nav {
@@ -40,7 +76,6 @@
       width: 100%;
       text-align: center;
       z-index: 1000;
-      margin-bottom: 500px;           /* Add space below the navigation bar */
     }
 
     nav ul {
@@ -60,7 +95,7 @@
       font-weight: bold;
       font-family: 'Arial', sans-serif;
       letter-spacing: 2px;
-      color: rgba(34, 33, 33, 0.823); /* Default color */
+      color: rgba(34, 33, 33, 0.823); 
       text-transform: uppercase;
       transition: color 0.3s ease, transform 0.3s ease;
     }
@@ -98,17 +133,12 @@
     }
 
     /* Film Section */
-    #section2 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
+ 
     iframe {
       width: 70%; /* Adjust width of the video */
       height: 70%; /* Adjust height of the video */
-      max-width: 1200px; /* Optional: Set a max width */
-      max-height: 800px; /* Optional: Set a max height */
+      max-width: 1200px; /*  Set a max width */
+      max-height: 800px; /* Set a max height */
       border: none;
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
     }
@@ -128,25 +158,47 @@
     box-shadow: 0 0 10px rgba(255, 87, 34, 0.8); /* Glow effect on hover */
   }
 
+/* Video Container */
+#video-container {
+    position: relative; /* Makes the container the reference point for positioning children */
+    width: 70%; /* Set a fixed width for the container */
+    max-width: 1200px; /* Set a max width */
+    aspect-ratio: 16 / 9; /* Maintain a 16:9 aspect ratio */
+    margin: auto; /* Center container horizontally */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* YouTube Video */
+iframe {
+    width: 100%; /* Take full width of the container */
+    height: 100%; /* Take full height of the container */
+    border: none;
+    display: block;
+}
+
 /* Interaction Buttons */
 #interaction-buttons {
-    text-align: bottom;
-    margin-top: 20px;
-  }
-  
-  #interaction-buttons button {
+    position: absolute; /* Position relative to the container */
+    top: 70%; /* Adjust top positioning for desired placement */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Correct the centering */
+    z-index: 2; /* Place above the video */
+    display: flex; /* To align buttons side by side */
+    gap: 60px; /* Space between buttons */
+}
+
+/* Individual Button Styling */
+#interaction-buttons button {
     background-color: #ff5722;
     color: white;
     border: none;
     padding: 10px 20px;
-    margin: 10px;
-    font-size: 26px;
+    font-size: 18px;
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-  }
-  
-  #interaction-buttons button:hover {
+}
+
+#interaction-buttons button:hover {
     background-color: #e64a19;
-  }
-  
+}
