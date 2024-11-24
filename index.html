@@ -11,6 +11,9 @@
 </head>
 <body>
 
+<body class="index-page">
+
+
 <!-- Navigation -->
 <nav>
   <ul>
@@ -24,63 +27,57 @@
 <!-- Sections -->
 <section id="section1"> </section>
 
+<!-- Section 2 Film Section-->
 <section id="section2">
-  <!-- YouTube Embed -->
-  <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-</iframe>
+    <div id="video-container">
+        <!-- YouTube Embed -->
+        <iframe id="main-video" width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY?enablejsapi=1" allowfullscreen></iframe>
 
-
-    <!-- Interactive buttons -->
+        <!-- Interactive buttons -->
         <div id="interaction-buttons" style="display: none;">
             <button id="run-away" onclick="window.location.href='option1.html'">Run Away</button>
-            <button id="sit-down" onclick="window.location.href='option2.html'">Sit Down and Listen</button>
+            <button id="sit-down" onclick="window.location.href='option2.html'">Sit Down</button>
         </div>
-
+    </div>
 </section>
 
-<section id="section3">
-            <!-- W3.CSS Carousel for BTS Page -->
-            <div class="w3-content w3-section" style="max-width:800px">
-                <img class="mySlides" src="images/bts1.jpg" style="width:100%" alt="BTS Image 1" >
-                <img class="mySlides" src="images/bts2.jpg" style="width:100%" alt="BTS Image 2">
-                <img class="mySlides" src="images/bts3.jpg" style="width:100%" alt="BTS Image 3">
-                <img class="mySlides" src="images/bts4.jpg" style="width:100%" alt="BTS Image 4">
-                <img class="mySlides" src="images/bts5.jpg" style="width:100%" alt="BTS Image 5">
-            </div>
+<!--Section 3 BTS Section-->
+<section id="section3">            
+    <!-- W3.CSS Carousel for BTS Page -->
+    <div class="w3-content w3-section" style="max-width:800px">
+        <img class="mySlides" src="images/bts1.jpeg" style="width:100%" alt="BTS Image 1" >
+        <img class="mySlides" src="images/bts2.png" style="width:100%" alt="BTS Image 2">
+        <img class="mySlides" src="images/bts3.png" style="width:100%" alt="BTS Image 3">
+        <img class="mySlides" src="images/bts4.png" style="width:100%" alt="BTS Image 4">
+        <img class="mySlides" src="images/bts5.png" style="width:100%" alt="BTS Image 6">
+        <img class="mySlides" src="images/bts6.png" style="width:100%" alt="BTS Image 7">
+        <img class="mySlides" src="images/bts7.png" style="width:100%" alt="BTS Image 8">
+        <img class="mySlides" src="images/bts8.png" style="width:100%" alt="BTS Image 9">
+    </div>
 </section>
 
-<section id="section4"></section>
-
-
+<!--Section 4 About Section-->
+<section id="section4">
+    <div class="about-content">
+      <p>"Shushed" is a satirical mockumentary that pokes fun at the wild, cringe-worthy obsessions showcased in shows like My Strange Addiction. The film hilariously chronicles Sanchith (played by Sanchith Rao), a college student whose love for ASMR spirals into a full-blown obsession. From late-night chip crinkling to library whisper gate, Shushed dives into the absurd world of whispered chaos, leaving his friends and roommates teetering on the edge of sanity.</p>
+  
+      <p>Directed and acted by Ian Chiu, Elizabeth Doan, Mariam Fatima, and Maryam Emaan Fiyaz, the film features a special appearance by Divya Aswani. It’s a collective effort, with all of us taking turns behind the camera, capturing the hilarity and chaos. Special thanks to Charlotte Hall and Divya Aswani for their invaluable assistance in bringing this quirky tale to life.</p>
+  
+      <p>With its over-the-top satire and oddly relatable humor, Shushed takes you on a journey of obsession, laughter, and pure secondhand embarrassment. Whether you’re an ASMR enthusiast or just someone who enjoys a good laugh at someone else’s expense, this mockumentary will have you whispering, “I need more.”</p>
+  
+      <p>So, grab your soup, find your quiet corner, and prepare to get "Shushed."</p>
+    </div>
+  </section>
+  
 <!-- Watch Now Button -->
 <a href="#section2" id="watch-now">
     <span class="oval-background">Watch Now</span>
 </a>
-  
+
+<!-- link the youtube api -->
+<script src="https://www.youtube.com/iframe_api"></script>
 <!-- link to the javascript code -->
 <script src = "script.js"></script>
-
-    <!-- YouTube API -->
-    <script src="https://www.youtube.com/iframe_api"></script>
-    <script>
-        var player;
-
-        function onYouTubeIframeAPIReady() {
-            player = new YT.Player('main-video', {
-                videoId: 'YOUR_VIDEO_ID', // Replace with your video ID, e.g., 'ACNTFQEh_sU'
-                events: {
-                    'onReady': onPlayerReady,
-                }
-            });
-        }
-
-        function onPlayerReady(event) {
-            setTimeout(() => {
-                document.getElementById('interaction-buttons').style.display = 'block';
-            }, 240000); // Show buttons after 4 minutes
-        }
-    </script>
-
 
 </body>
 </html>
